@@ -348,11 +348,11 @@ a:focus {
     `present` class ...
 */
 #ing.present .positioning {
-    -webkit-transform: translateY(10px);
-    -moz-transform:    translateY(10px);
-    -ms-transform:     translateY(10px);
-    -o-transform:      translateY(10px);
-    transform:         translateY(10px);
+    -webkit-transform: translateX(30px);
+    -moz-transform:    translateX(30px);
+    -ms-transform:     translateX(30px);
+    -o-transform:      translateX(30px);
+    transform:         translateX(30px);
 
     -webkit-transition-delay: 1.5s;
     -moz-transition-delay:    1.5s;
