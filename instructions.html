@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Welcome to Telstra multi-cloud by Cloud Practice</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+    <link href="css/telstra.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon-blue.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id="instructions" class="step slideinstruction" data-x="-2000" data-y="-2000">
+	<q>Welcome to the Cisco Cloud Openstack exercise.</q>
+        <q>The goal of this exercise is to provide firsthand experience with Horizon - the Openstack portal.</q>
+    </div>
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+    <div id="goal" class="step slideinstruction" data-x="-1000" data-y="-2000">
+        <q>In this exercise you will create a web site that you can access from your laptop or mobile phone.</q>
+    </div>
+
+    <div id="infrastructure" class="step slideinstruction" data-x="0" data-y="-2000">
+        <q>You will build the web site from scratch, including networking, virtual machines and, as a stretch target, a load balancer.</q>
+    </div>
+
+    <div class="step slideinstruction" data-x="1000" data-y="-2000">
+        <h2>Access the Portal</h2>
+        <img src="images/horizon_login_before.PNG" alt="Horizon Login Page">
+         <ol>
+           <li>To begin, click <a target="_blank" href="https://au-mel-1.telstra.cloud.cisco.com">here</a> </li>
+           <li>To access the portal, please enter your username and password in the appropriate box and hit “Sign In”.</li>
+        </ol>        
+    </div>
+
+    <div id="dashboard" class="step slideinstruction" data-x="2000" data-y="-2000">
+        <h2>Horizon Dashboard</h2>
+        <img src="images/horizon_dash.png" alt="Horizon Login Page">
+        <ol>
+           <li>In the navigation pane, you will see your current project. Your project name will be different.</li>
+           <li>The main pane provides a view on the resources currently used by the project.
+               <p>As this is a new project, all resources should be idle and set to zero.</p></li>
+           <li>The Usage Summary provides a per-instance view of the resources used by the project. 
+               <p>Again, as this is a new project, the summary should be empty.</p></li>
+           <li>In the navigation pane, select “Network Topology”.
+           <p>Our next step will be to view the current network set up of our project.</p></li>
+        </ol>
+    </div>
+
+    <div id="finished" class="step slideinstruction" data-x="3000" data-y="-2000">
+        <h2>Finished Project</h2>
+        <img src="images/network_topology_final.png" alt="Network Topology Final">
+        <ol>
+           <li>The blue vertical line represents the internet-facing public network of the project.
+               <p>Every project starts with a public network.</p></li>
+           <li>The orange vertical line represents the internal private network. In the exercise, we will create the private network first as all the other components rely on it.</li>
+           <li>The box labelled Router represents the connection between the public and private networks. We will create the router in this exercise.</li>
+           <li>The boxes labelled Instance represent the web servers the serve up the web page for this exercise. We will create these web servers in this exercise.</li>
+        </ol>
+    </div>
+
+    <div id="new_network" class="step slideinstruction" data-x="4000" data-y="-2000">
+        <h2>Create your New Network</h2>
+        <img src="images/network_topology_empty.png" alt="Network Topology Empty">
+        <ol>
+          <li>The only component we have in this view is the public network, denoted as the vertical blue line labelled “public-
+floating-601”.</li>
+          <li>In the navigation pane, select “Networks”.
+             <p>Our first goal is to add a private network.</p></li>
+          <li><strong>NOTE</strong>: To change the size of the icons displayed in the Network Topology view, select either “Small” or “Normal”. This is optional, but may come in handy throughout the exercise.</li>
+        </ol>
+    </div>
+
+    <div id="new_nw" class="step slideinstruction" data-x="5000" data-y="-2000">
+        <h2>Create a Private Network</h2>
+        <img src="images/network_create.png" alt="Create Private Network">
+        <p>The Networks view provides a list of private networks associated with the project.<p>
+        <ol>
+           <li>Currently the list is empty. To create a new <strong>private</strong> network, select the + Create Network button.
+               <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+    
+    <div id="new_nw_one" class="step slideinstruction" data-x="-2000" data-y="-1000">
+        <h2>Create a Private Network. Step One.</h2>
+        <img src="images/network_create_fields.png" alt="Create Private Network. Step Two.">
+        <p>To create a new network, step through the Create Network wizard as shown above.<p>
+        <ol>
+           <li>In the “Network Name” text box, provide a name for the Private Network. A good choice is “internal”.
+               <p>All other fields can be left to their default values.</p></li> 
+           <li>Select the Subnet tab to move to the next step.</li>
+        </ol>
+    </div>
+
+    <div id="new_nw_two" class="step slideinstruction" data-x="-1000" data-y="-1000">
+        <h2>Create a Private Network. Step Two.</h2>
+        <img src="images/network_create_fields_subnet.png" alt="Create Private Network. Step Two.">
+        <ol>
+          <li>In the “Subnet Name” text box, provide a name for the subnet. A good choice is <strong>subnet-01</strong>.</li>
+          <li>In the “Network address” text box, provide the network address. A good choice is <strong>“192.168.55.0/24”</strong>.
+             <p>All other fields can be left to their default values.</p></li>
+          <li>Select the “Subnet detail” tab to move to the next step.</li>
+        </ol>
+    </div>
+
+    <div id="new_nw_three" class="step slideinstruction" data-x="0" data-y="-1000">
+        <h2>Create a Private Network. Step Three.</h2>
+        <img src="images/network_create_fields_subnet_details.png" alt="Create Private Network. Step Three.">
+        <ol>
+           <li>In the DNS Name Servers text box, enter “8.8.8.8”.
+              <p>This address points to Google servers and makes it possible to connect to other websites.</p></li>
+           <li>Once done, select the Create button to create the Private Network.
+              <p>You will be returned to the Networks view.</p></li>
+        </ol>
+    </div>
+
+    <div id="new_nw_done" class="step slideinstruction" data-x="1000" data-y="-1000">
+        <h2>New Private Network.</h2>
+        <img src="images/network_create_done.png" alt="New Private Network.">
+        <p>Once completed, a new network entry will appear in the Networks list.</p> 
+        <ol>
+          <li>The name should be “internal”, the associated Subnet should match that IP address range you provided.
+             <p> The Status should be <strong>ACTIVE</strong></p></li>
+          <li>To view the private network, select Network Topology.</li>
+        </ol>
+    </div>
+
+    <div id="network_topology" class="step slideinstruction" data-x="2000" data-y="-1000">
+        <h2>Updated Network Topology</h2>
+        <img src="images/network_topology_private.png" alt="Updated Network Topology.">
+        <ol>
+          <li>The private network is depicted as a vertical orange line.</li>
+          <li>Select <strong>Routers</strong> from the navigation pane.
+             <p>We will now create a router to connect the public network to the private network.</p></li>
+        </ol>
+    </div>
+
+    <div id="create_router" class="step slideinstruction" data-x="3000" data-y="-1000">
+        <h2>Create a Router</h2>
+        <img src="images/router_create.png" alt="Create a new Router.">
+        <p>The router will connect the public network to the private network.</p>
+        <ol>
+          <li>The main view lists the routers created for this project. The list should be empty.</li>
+          <li>To create a new router, select <strong>+ Create Router</strong>
+              <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="create_router_name" class="step slideinstruction" data-x="4000" data-y="-1000">
+        <h2>Create a Router</h2>
+        <img src="images/router_create_fields.png" alt="Create a new Router.">
+        <p>Creating a new router is simple – give it a name.</p>
+        <ol>
+          <li>In the Router Name field, type a name for your router. A good choice is “router-01".</li>
+          <li>Once you have typed the name, select <strong>Create Router</strong>.
+              <p>You will be returned to the Routers view.</p></li>
+        </ol>
+    </div>
+
+    <div id="create_router_done" class="step slideinstruction" data-x="5000" data-y="-1000">
+        <h2>Router Created.</h2>
+        <img src="images/router_create_done.png" alt="Router Created.">
+        <ol>
+          <li>Once completed, a new router entry will appear in the Routers list.
+            <p>The name should be “router-01”. The Status should be “ACTIVE".</p></li>
+          <li>The next step is to connect your new router to the public network. Select <strong>Set Gateway</strong>.
+              <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="set_gateway" class="step slideinstruction" data-x="-2000" data-y="0">
+        <h2>Set Gateway.</h2>
+        <img src="images/router_gateway.png" alt="Set Gateway.">
+        <ol>
+          <li>In the External Network drop-down box, select the public network “public-floating-601”</li>
+          <li>Once you selected the public network, select <strong>Set Gateway</strong> to set the gateway
+            <p>You will be returned to the Routers view.</p></li>
+        </ol>
+    </div>
+
+    <div id="view_gateway" class="step slideinstruction" data-x="-1000" data-y="0">
+        <h2>View Gateway.</h2>
+        <img src="images/router_with_gateway.png" alt="View Gateway.">
+        <ol>
+          <li>Once completed, the router entry will be updated so that the External Network field will point to the public network.</li>
+          <li>To view the router, select <strong>Network Topology.</strong></li>
+        </ol>
+    </div>
+
+    <div id="view_nw_gateway" class="step slideinstruction" data-x="0" data-y="0">
+        <h2>View Network with Gateway.</h2>
+        <img src="images/router_connected.png" alt="View Network with Gateway.">
+        <ol>
+          <li>The router is now connected to the public network. To view more information about the router, place your mouse pointer over the Router icon. 
+             <p>A new window with details about the Router will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="connect_private_network" class="step slideinstruction" data-x="1000" data-y="0">
+        <h2>Connect the Private Network.</h2>
+        <img src="images/router_connected_details.png" alt="Connect the Private Network.">
+        <p>The details view provides further information such as STATUS as well as a list of interfaces.</p>
+        <ol>
+           <li>To connect the private network, we will create a new Inteface. Select <strong>view router details</strong>.</li>
+        </ol>
+    </div>
+
+    <div id="add_interface" class="step slideinstruction" data-x="2000" data-y="0">
+        <h2>Add A New Interface.</h2>
+        <img src="images/router_interface_create.png" alt="Add Interface.">
+        <ol>
+          <li>The main view lists the interfaces for this router. The interfaces describe the connections to the private network.
+            <p>At present, the list should be empty.</p></li>
+          <li>To create a new interface, select <strong>+ Add Interface</strong>.
+            <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="add_interface_details" class="step slideinstruction" data-x="3000" data-y="0">
+        <h2>Set Interface Details.</h2>
+        <img src="images/interface_create.png" alt="Set Interface Details.">
+        <ol>
+           <li>In the Subnet drop-down box, select the subnet for the private network “internal:  192.168.55.0/24 (subnet-01)”.
+              <p>All other fields can be left to their default values.</p></li> 
+           <li>Once you selected the private network, select <strong>Add Interface</strong> to add the interface.
+              <p>You will be returned to the Router Overview view.</p></li>
+        </ol>
+    </div>
+
+    <div id="router_with_interface" class="step slideinstruction" data-x="4000" data-y="0">
+        <h2>Router with Interface.</h2>
+        <img src="images/interface_done.png" alt="Router with Interface.">
+        <p>With the Interface, the Router should now connect the public and private networks.</p>
+        <ol>
+           <li>Once completed, a new interface entry will appear in the Interfaces list. 
+              <p>If the Status is “DOWN”, hit re-fresh on your browser a few times to see if the status changes.</p> </li>
+           <li>To view the connection, select <strong>Network Topology</strong>.</li>
+        </ol>
+    </div>
+
+    <div id="private_public_connected" class="step slideinstruction" data-x="5000" data-y="0">
+        <h2>Public and Private networks connected.</h2>
+        <img src="images/network_topology_pub_and_priv.png" alt="Networks connected.">
+        <ol>
+           <li>The router has now been configured to connect the public and private networks.
+              <p>It is now possible to add new instances and access them from the public internet.</p></li> 
+           <li>To create a new instance, select <strong>Instances</strong> from the navigation pane.</li>
+        </ol>
+    </div>
+
+    <div id="create_instance" class="step slideinstruction" data-x="-2000" data-y="1000">
+        <h2>Create an Instance.</h2>
+        <img src="images/instance_create.png" alt="Create an Instance.">
+        <ol>
+          <li>The main view lists the Instances for this project.
+            <p>At present, the list should be empty.<p></li>
+          <li>To create a new instance, select <strong>+ Launch Instance”</strong>.
+            <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="create_instance_one" class="step slideinstruction" data-x="-1000" data-y="1000">
+        <h2>Create an Instance. Step One.</h2>
+        <img src="images/instance_create_details.png" alt="Create an Instance. Step One.">
+        <ol>
+          <li>In the Instance Name text box, provide a name for the instance. A good choice is “web-app-instance”.</li>
+          <li>In the Flavour pull-down menu, select <strong>GP-Small</strong>.</li> 
+          <li>In the Instance Boot Source pull-down menu, select <strong>Boot from Image</strong>.
+             <p>Once selected, a new pull-down box will appear entitled “Image Name”.</p></li>
+          <li>In the Image Name pull-down menu, select <strong>ubuntu-trusty-server-cloudimg-amd64-disk1.2014-09-27</strong>.
+             <p>All other fields can be left to their default values.</p</li>
+          <li>Select the <strong>Access and Security</strong> tab to move to the next step.</li>
+        </ol>
+    </div>
+
+    <div id="create_instance_two" class="step slideinstruction" data-x="0" data-y="1000">
+        <h2>Create an Instance. Step Two.</h2>
+        <img src="images/instance_create_security.png" alt="Create an Instance. Step Two.">
+        <ol>
+           <li>In the Keypair pull-down menu, select <strong>web_key.public</strong>.
+           <p>All other fields can be left to their default values.</p></li>
+           <li>Select the <strong>Networking</strong> tab to move to the next step.</p>
+        </ol>
+    </div>
+
+    <div id="create_instance_three" class="step slideinstruction" data-x="1000" data-y="1000">
+        <h2>Create an Instance. Step Three.</h2>
+        <img src="images/instance_create_networking.png" alt="Create an Instance. Step Three.">
+        <ol>
+          <li>From the “Available networks” box, drag and drop the internal network label into the “Selected Networks” box.</li>
+          <li>Select the <strong>Post-Creation</strong> tab to move to the next step.</li>
+        </ol>
+    </div>
+
+    <div id="create_instance_four" class="step slideinstruction" data-x="2000" data-y="1000">
+        <h2>Create an Instance. Step Four.</h2>
+        <img src="images/instance_create_post_create_paste_script.png" alt="Create an Instance. Step Four.">
+        <p>In order to turn this instance into a web server, we need to add some extra packages which we will download from the Internet. In order to tell OpenStack which packages to retrieve we will provide a script.
+For this exercise, the script can be found <a target="_blank" href="https://raw.githubusercontent.com/seanjkellett/WeatherApp/master/build-scripts/linux-presentation.txt">here</a>.<p>
+        <ol>
+          <li>When you have copied the script, paste it in the Customisation Script textbox.</li>
+          <li>Once you have pasted the script, select <strong>Launch</strong> to launch the instance.
+            <p>You will be returned to the Instances view</p></li>
+        </ol>
+    </div>
+
+    <div id="instance_created" class="step slideinstruction" data-x="3000" data-y="1000">
+        <h2>Instance Created.</h2>
+        <img src="images/instance_create_done.png" alt="Instance Created.">
+        <ol>
+          <li>Once completed, a new instance entry will appear in the Instances list.<p>The instance will have a private IP address assigned to it and the Status should be “Active”.</p></li> 
+          <li>It may take a minute or two for the instance to boot up, but once it is, the Power State will be “Running”.</li> 
+          <li>The next step is to add a public IP address to the instance. Select <strong>Access and Security</strong> from the navigation pane.</li>
+        </ol>
+    </div>
+
+    <div id="add_public_ip" class="step slideinstruction" data-x="4000" data-y="1000">
+        <h2>Add a Public IP Address.</h2>
+        <img src="images/access_security.png" alt="Create a Public IP address.">
+        <ol>
+          <li>The main view lists the Security Groups for this project. 
+            <p>One security group – “default” – has been set up for the project.</p></li>
+          <li>To add a public IP address to the instance, select the <strong>Floating IPs</strong> tab.</li>
+        </ol>
+    </div>
+
+    <div id="add_public_ip_one" class="step slideinstruction" data-x="5000" data-y="1000">
+        <h2>Add a Public IP Address. Step One.</h2>
+        <img src="images/access_security_floating_ip.png" alt="Create a Public IP address. Step One.">
+        <ol>
+          <li>The main view lists the Floating IPs for this project. Presently, there are no IP addresses allocated to the project.</li>
+          <li>To allocate a public IP, select <strong>Allocate IP To Project</strong>.
+             <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="add_public_ip_two" class="step slideinstruction" data-x="-2000" data-y="2000">
+        <h2>Add a Public IP Address. Step Two.</h2>
+        <img src="images/access_security_floating_ip_allocate.png" alt="Create a Public IP address. Step Two.">
+        <ol>
+           <li>In the Pool pull-down menu, select <strong>public-floating-601</strong>.
+             <p>“public-floating-601” should be the only available option.</p></li> 
+           <li>Select <strong>Allocate IP</strong> to allocate the IP address to the project.
+             <p>You will be returned to the Floating IPs view.</p></li>
+        </ol>
+    </div>
+
+    <div id="add_public_ip_three" class="step slideinstruction" data-x="-1000" data-y="2000">
+        <h2>Add a Public IP Address. Step Three.</h2>
+        <img src="images/access_security_floating_ip_allocated.png" alt="Create a Public IP address. Step Three.">
+        <ol>
+           <li>Once completed, a new public IP address entry will appear in the Floating IPs.
+            <p>The value in the “Instance” column should be a “-“.</p></li>
+           <li>To associate the public IP address to an instance, select <strong>Associate</strong>.
+            <p>A pop-up window will appear.</p></li>
+        </ol>
+    </div>
+
+    <div id="add_public_ip_four" class="step slideinstruction" data-x="0" data-y="2000">
+        <h2>Add a Public IP Address. Step Four.</h2>
+        <img src="images/access_security_floating_ip_associate.png" alt="Create a Public IP address. Step Four.">
+        <ol>
+          <li>In the IP Address pull-down menu, select the newly allocated public IP address.
+           <p>There will only be one IP address to select.</p></li>
+          <li>In the Port to be associated pull-down menu, select the private IP address for the instance.</li>
+          <li>Select the <strong>Associate</strong> button to associate the public IP address to the instance.
+           <p>You will be returned to the Floating IPs view.</p></li>
+        </ol>
+    </div>
+
+    <div id="public_ip_added" class="step slideinstruction" data-x="1000" data-y="2000">
+        <h2>Public IP Address Created.</h2>
+        <img src="images/access_security_floating_ip_associated.png" alt="Public IP address Created.">
+        <ol>
+          <li>Once completed, the value in the “Instance” column should be a “web-app-instance”.</li> 
+          <li>Open a new tab in your browser and enter the IP address.
+          <p><strong>NOTE</strong>: There may be a delay attaching the floating IP address to instance. 
+            To check progress, select ‘Instances’ from the menu on the left.</p></li>
+        </ol>
+    </div>
+
+    <div id="overview" class="step" data-x="1500" data-y="0" data-scale="5"> </div>
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+

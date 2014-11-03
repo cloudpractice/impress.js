@@ -216,7 +216,7 @@ a:focus {
     height: 700px;
     padding: 40px 60px;
 
-    background-color: #1192d3;
+    /* background-color: #FFFFFF; */
     background-repeat: no-repeat;
     background: -webkit-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
     background:      -o-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
@@ -248,6 +248,129 @@ a:focus {
 
 .slide q strong {
     white-space: nowrap;
+}
+
+.slideinstruction {
+    display: block;
+
+    width: 900px;
+    height: 800px;
+    padding: 40px 60px;
+
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    /*background: -webkit-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
+    background:      -o-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
+    background:    -moz-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
+    background:      linear-gradient(to top, rgba(70,25,140,1) 12%, rgba(252,0,129,1)); */
+
+    /*background-color: white; */
+
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: rgb(252,0,129);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    margin-right: 200px;
+}
+
+.slideinstruction q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slideinstruction q strong {
+    white-space: nowrap;
+}
+
+.slideinstruction ol {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+     
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    vertical-align: bottom;
+ 
+    counter-reset: li-counter;
+    bottom: 5px;
+
+}
+.slideinstruction img {
+
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 300px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.slideinstruction h2 {
+
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+.slideinstruction ol
+{
+    border: 5px;
+}
+.slideinstruction ol > li{
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 0.5em;
+    min-height: 3em;
+    bottom: -50px;
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    height:6px;
+}
+
+.slideinstruction  p {
+
+    padding-top: 20px;
+    padding-left: 65px;
+    color: #000000;
+    font-size: 17px;
+}
+.slideinstruction ol > li > p {
+
+    padding-top: 3px;
+    padding-left: 20px;
+    color: #808080;
+}
+.slideinstruction ol > li:before {
+    position: absolute;
+    top: 0;
+    left: -1.33em;
+    width: 1.2em;
+    height: 1.2em;
+     
+    font-size: 20px;
+    font-color: #000000;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF;
+ 
+    border-radius: 50%;
+    background-color: #00B0F0;
+    content: counter(li-counter);
+    counter-increment: li-counter;
 }
 
 /*
@@ -679,6 +802,36 @@ a:focus {
     transition:         opacity 1s 5s,         transform 0.5s 4.5s;
 }
 
+/*
+    ... and we will show it when the first step (with id 'bored') is active.
+*/
+.impress-on-instructions .hint {
+    /*
+        We remove the transparency and position the hint in its default fixed
+        position.
+    */
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+
+    /*
+        Now for fade in transition we have the oposite situation from the one
+        above.
+
+        First after 4.5s delay we animate the transform property to move the hint
+        into its correct position and after that we fade it in with opacity
+        transition.
+    */
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
+    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
+}
 /*
     And as the last thing there is a workaround for quite strange bug.
     It happens a lot in Chrome. I don't remember if I've seen it in Firefox.
