@@ -141,11 +141,11 @@
         <img src="images/horizon_dash.png" alt="Horizon Login Page">
         <ol>
            <li>In the navigation pane, you will see your current project. Your project name will be different.</li>
-           <li>The main pane provides a view on the resources currently used by the project.
+           <li>The main pane provides a view of the resources currently used by the project.
                <p>As this is a new project, all resources should be idle and set to zero.</p></li>
            <li>The Usage Summary provides a per-instance view of the resources used by the project. 
                <p>Again, as this is a new project, the summary should be empty.</p></li>
-           <li>In the navigation pane, select “Network Topology”.
+           <li>In the navigation pane, select <strong>Network Topology</strong>.
            <p>Our next step will be to view the current network set up of our project.</p></li>
         </ol>
     </div>
@@ -163,12 +163,12 @@
     </div>
 
     <div id="new_network" class="step slideinstruction" data-x="4000" data-y="-2000">
-        <h2>Create your New Network</h2>
+        <h2>OpenStack Network View</h2>
         <img src="images/network_topology_empty.png" alt="Network Topology Empty">
         <ol>
           <li>The only component we have in this view is the public network, denoted as the vertical blue line labelled “public-
 floating-601”.</li>
-          <li>In the navigation pane, select “Networks”.
+          <li>In the navigation pane, select <strong>Networks</strong>.
              <p>Our first goal is to add a private network.</p></li>
           <li><strong>NOTE</strong>: To change the size of the icons displayed in the Network Topology view, select either “Small” or “Normal”. This is optional, but may come in handy throughout the exercise.</li>
         </ol>
@@ -179,7 +179,7 @@ floating-601”.</li>
         <img src="images/network_create.png" alt="Create Private Network">
         <p>The Networks view provides a list of private networks associated with the project.<p>
         <ol>
-           <li>Currently the list is empty. To create a new <strong>private</strong> network, select the + Create Network button.
+           <li>Currently the list is empty. To create a new <strong>private</strong> network, select <strong>+ Create Network</strong>.
                <p>A pop-up window will appear.</p></li>
         </ol>
     </div>
@@ -212,7 +212,7 @@ floating-601”.</li>
         <ol>
            <li>In the DNS Name Servers text box, enter “8.8.8.8”.
               <p>This address points to Google servers and makes it possible to connect to other websites.</p></li>
-           <li>Once done, select the Create button to create the Private Network.
+           <li>Once done, select <strong>Create</strong> to create the Private Network.
               <p>You will be returned to the Networks view.</p></li>
         </ol>
     </div>
@@ -224,12 +224,12 @@ floating-601”.</li>
         <ol>
           <li>The name should be “internal”, the associated Subnet should match that IP address range you provided.
              <p> The Status should be <strong>ACTIVE</strong></p></li>
-          <li>To view the private network, select Network Topology.</li>
+          <li>To view the private network, select <strong<Network Topology</strong>.</li>
         </ol>
     </div>
 
     <div id="network_topology" class="step slideinstruction" data-x="2000" data-y="-1000">
-        <h2>Updated Network Topology</h2>
+        <h2>Updated Network Topology.</h2>
         <img src="images/network_topology_private.png" alt="Updated Network Topology.">
         <ol>
           <li>The private network is depicted as a vertical orange line.</li>
@@ -239,7 +239,7 @@ floating-601”.</li>
     </div>
 
     <div id="create_router" class="step slideinstruction" data-x="3000" data-y="-1000">
-        <h2>Create a Router</h2>
+        <h2>Configure a Router.</h2>
         <img src="images/router_create.png" alt="Create a new Router.">
         <p>The router will connect the public network to the private network.</p>
         <ol>
@@ -250,7 +250,7 @@ floating-601”.</li>
     </div>
 
     <div id="create_router_name" class="step slideinstruction" data-x="4000" data-y="-1000">
-        <h2>Create a Router</h2>
+        <h2>Configure a Router. Step One.</h2>
         <img src="images/router_create_fields.png" alt="Create a new Router.">
         <p>Creating a new router is simple – give it a name.</p>
         <ol>
@@ -261,7 +261,7 @@ floating-601”.</li>
     </div>
 
     <div id="create_router_done" class="step slideinstruction" data-x="5000" data-y="-1000">
-        <h2>Router Created.</h2>
+        <h2>Configure a Router. Step Two.</h2>
         <img src="images/router_create_done.png" alt="Router Created.">
         <ol>
           <li>Once completed, a new router entry will appear in the Routers list.
@@ -272,7 +272,7 @@ floating-601”.</li>
     </div>
 
     <div id="set_gateway" class="step slideinstruction" data-x="-2000" data-y="0">
-        <h2>Set Gateway.</h2>
+        <h2>Configure a Router. Step Three.</h2>
         <img src="images/router_gateway.png" alt="Set Gateway.">
         <ol>
           <li>In the External Network drop-down box, select the public network “public-floating-601”</li>
@@ -282,16 +282,16 @@ floating-601”.</li>
     </div>
 
     <div id="view_gateway" class="step slideinstruction" data-x="-1000" data-y="0">
-        <h2>View Gateway.</h2>
+        <h2>Configure a Router. Step Four.</h2>
         <img src="images/router_with_gateway.png" alt="View Gateway.">
         <ol>
           <li>Once completed, the router entry will be updated so that the External Network field will point to the public network.</li>
-          <li>To view the router, select <strong>Network Topology.</strong></li>
+          <li>To view the router, select <strong>Network Topology</strong>.</li>
         </ol>
     </div>
 
     <div id="view_nw_gateway" class="step slideinstruction" data-x="0" data-y="0">
-        <h2>View Network with Gateway.</h2>
+        <h2>Configure a Router. Step Five.</h2>
         <img src="images/router_connected.png" alt="View Network with Gateway.">
         <ol>
           <li>The router is now connected to the public network. To view more information about the router, place your mouse pointer over the Router icon. 
@@ -300,7 +300,7 @@ floating-601”.</li>
     </div>
 
     <div id="connect_private_network" class="step slideinstruction" data-x="1000" data-y="0">
-        <h2>Connect the Private Network.</h2>
+        <h2>Configure a Router. Step Six.</h2>
         <img src="images/router_connected_details.png" alt="Connect the Private Network.">
         <p>The details view provides further information such as STATUS as well as a list of interfaces.</p>
         <ol>
@@ -309,7 +309,7 @@ floating-601”.</li>
     </div>
 
     <div id="add_interface" class="step slideinstruction" data-x="2000" data-y="0">
-        <h2>Add A New Interface.</h2>
+        <h2>Configure a Router. Step Seven.</h2>
         <img src="images/router_interface_create.png" alt="Add Interface.">
         <ol>
           <li>The main view lists the interfaces for this router. The interfaces describe the connections to the private network.
@@ -320,7 +320,7 @@ floating-601”.</li>
     </div>
 
     <div id="add_interface_details" class="step slideinstruction" data-x="3000" data-y="0">
-        <h2>Set Interface Details.</h2>
+        <h2>Configure a Router. Step Eight.</h2>
         <img src="images/interface_create.png" alt="Set Interface Details.">
         <ol>
            <li>In the Subnet drop-down box, select the subnet for the private network “internal:  192.168.55.0/24 (subnet-01)”.
@@ -331,7 +331,7 @@ floating-601”.</li>
     </div>
 
     <div id="router_with_interface" class="step slideinstruction" data-x="4000" data-y="0">
-        <h2>Router with Interface.</h2>
+        <h2>Configure a Router. Step Nine.</h2>
         <img src="images/interface_done.png" alt="Router with Interface.">
         <p>With the Interface, the Router should now connect the public and private networks.</p>
         <ol>
@@ -342,7 +342,7 @@ floating-601”.</li>
     </div>
 
     <div id="private_public_connected" class="step slideinstruction" data-x="5000" data-y="0">
-        <h2>Public and Private networks connected.</h2>
+        <h2>Router Configured.</h2>
         <img src="images/network_topology_pub_and_priv.png" alt="Networks connected.">
         <ol>
            <li>The router has now been configured to connect the public and private networks.
@@ -476,9 +476,8 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
         <img src="images/access_security_floating_ip_associated.png" alt="Public IP address Created.">
         <ol>
           <li>Once completed, the value in the “Instance” column should be a “web-app-instance”.</li> 
-          <li>Open a new tab in your browser and enter the IP address.
-          <p><strong>NOTE</strong>: There may be a delay attaching the floating IP address to instance. 
-            To check progress, select ‘Instances’ from the menu on the left.</p></li>
+          <li>You can now view your creation! Open a new tab in your browser and enter the IP address.
+            <p>Your creation should look like <a target="_blank" href="index.html">this!</a>
         </ol>
     </div>
 
