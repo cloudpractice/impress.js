@@ -183,6 +183,10 @@ a:focus {
     line-height: 1.5;
 }
 
+.impress-not-supported .step {
+    display: none;
+}
+
 /*
     ... and we enhance the styles for impress.js.
 
