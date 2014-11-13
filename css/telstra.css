@@ -302,6 +302,7 @@ a:focus {
      
     margin: 0;
     margin-left: 0;
+    margin-top: 0;
     padding: 0;
     vertical-align: bottom;
  
@@ -327,30 +328,26 @@ a:focus {
     text-align: center;
 
 }
-.slideinstruction ol
-{
-    border: 5px;
-}
 .slideinstruction ol > li{
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-left: 0.5em;
     min-height: 3em;
-    bottom: -50px;
+    bottom: -20px;
     color: #000000;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.4;
     margin: 0;
     padding: 0;
-    height:6px;
+    height:1px;
 }
 
 .slideinstruction  p {
 
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 65px;
     color: #000000;
-    font-size: 17px;
+    font-size: 15px;
 }
 .slideinstruction ol > li > p {
 
