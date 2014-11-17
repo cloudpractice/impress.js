@@ -263,11 +263,6 @@ a:focus {
 
     background-color: #FFFFFF;
     background-repeat: no-repeat;
-    /*background: -webkit-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
-    background:      -o-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
-    background:    -moz-linear-gradient(top, rgba(70,25,140,1) 12%, rgba(252,0,129,1));
-    background:      linear-gradient(to top, rgba(70,25,140,1) 12%, rgba(252,0,129,1)); */
-
     /*background-color: white; */
 
     border: 1px solid rgba(0, 0, 0, .3);
@@ -321,7 +316,6 @@ a:focus {
     margin-right: auto;
 
 }
-
 .slideinstruction h2 {
 
     padding-bottom: 20px;
@@ -767,6 +761,17 @@ a:focus {
     transition:         opacity 1s,         transform 0.5s 1s;
 }
 
+.watermark img {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 96px;
+    width: 165px;
+    right: 40px;
+    bottom: 40px;
+    margin-bottom: -20px;
+}
 /*
     Now we 'enable' the hint when presentation is initialized ...
 */

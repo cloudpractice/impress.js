@@ -9,7 +9,6 @@
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <!--
         
@@ -103,6 +102,7 @@
     <div id="instructions" class="step slideinstruction" data-x="-2000" data-y="-2000">
 	<q>Welcome to the Cisco Cloud Openstack exercise.</q>
         <q>The goal of this exercise is to provide firsthand experience with Horizon - the Openstack portal.</q>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
     <!--
         
@@ -121,10 +121,12 @@
     -->
     <div id="goal" class="step slideinstruction" data-x="-1000" data-y="-2000">
         <q>In this exercise you will create a web site that you can access from your laptop or mobile phone.</q>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="infrastructure" class="step slideinstruction" data-x="0" data-y="-2000">
         <q>You will build the web site from scratch, including networking, virtual machines and, as a stretch target, a load balancer.</q>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="1000" data-y="-2000">
@@ -134,6 +136,7 @@
            <li>To begin, click <a target="_blank" href="https://au-mel-1.telstra.cloud.cisco.com">here</a> </li>
            <li>To access the portal, please enter your username and password in the appropriate box and hit “Sign In”.</li>
         </ol>        
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="dashboard" class="step slideinstruction" data-x="2000" data-y="-2000">
@@ -148,6 +151,7 @@
            <li>In the navigation pane, select <strong>Network Topology</strong>.
            <p>Our next step will be to view the current network set up of our project.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="finished" class="step slideinstruction" data-x="3000" data-y="-2000">
@@ -160,6 +164,7 @@
            <li>The box labelled Router represents the connection between the public and private networks. We will create the router in this exercise.</li>
            <li>The boxes labelled Instance represent the web servers the serve up the web page for this exercise. We will create these web servers in this exercise.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="new_network" class="step slideinstruction" data-x="4000" data-y="-2000">
@@ -172,6 +177,7 @@ floating-601”.</li>
              <p>Our first goal is to add a private network.</p></li>
           <li><strong>NOTE</strong>: To change the size of the icons displayed in the Network Topology view, select either “Small” or “Normal”. This is optional, but may come in handy throughout the exercise.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="new_nw" class="step slideinstruction" data-x="5000" data-y="-2000">
@@ -182,6 +188,7 @@ floating-601”.</li>
            <li>Currently the list is empty. To create a new <strong>private</strong> network, select <strong>+ Create Network</strong>.
                <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
     
     <div id="new_nw_one" class="step slideinstruction" data-x="-2000" data-y="-1000">
@@ -193,6 +200,7 @@ floating-601”.</li>
                <p>All other fields can be left to their default values.</p></li> 
            <li>Select the Subnet tab to move to the next step.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="new_nw_two" class="step slideinstruction" data-x="-1000" data-y="-1000">
@@ -204,6 +212,7 @@ floating-601”.</li>
              <p>All other fields can be left to their default values.</p></li>
           <li>Select the “Subnet detail” tab to move to the next step.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="new_nw_three" class="step slideinstruction" data-x="0" data-y="-1000">
@@ -215,6 +224,7 @@ floating-601”.</li>
            <li>Once done, select <strong>Create</strong> to create the Private Network.
               <p>You will be returned to the Networks view.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="new_nw_done" class="step slideinstruction" data-x="1000" data-y="-1000">
@@ -226,6 +236,7 @@ floating-601”.</li>
              <p> The Status should be <strong>ACTIVE</strong></p></li>
           <li>To view the private network, select <strong>Network Topology</strong>.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="network_topology" class="step slideinstruction" data-x="2000" data-y="-1000">
@@ -236,6 +247,7 @@ floating-601”.</li>
           <li>Select <strong>Routers</strong> from the navigation pane.
              <p>We will now create a router to connect the public network to the private network.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_router" class="step slideinstruction" data-x="3000" data-y="-1000">
@@ -247,6 +259,7 @@ floating-601”.</li>
           <li>To create a new router, select <strong>+ Create Router</strong>
               <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_router_name" class="step slideinstruction" data-x="4000" data-y="-1000">
@@ -258,6 +271,7 @@ floating-601”.</li>
           <li>Once you have typed the name, select <strong>Create Router</strong>.
               <p>You will be returned to the Routers view.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_router_done" class="step slideinstruction" data-x="5000" data-y="-1000">
@@ -269,6 +283,7 @@ floating-601”.</li>
           <li>The next step is to connect your new router to the public network. Select <strong>Set Gateway</strong>.
               <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="set_gateway" class="step slideinstruction" data-x="-2000" data-y="0">
@@ -279,6 +294,7 @@ floating-601”.</li>
           <li>Once you selected the public network, select <strong>Set Gateway</strong> to set the gateway
             <p>You will be returned to the Routers view.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="view_gateway" class="step slideinstruction" data-x="-1000" data-y="0">
@@ -288,6 +304,7 @@ floating-601”.</li>
           <li>Once completed, the router entry will be updated so that the External Network field will point to the public network.</li>
           <li>To view the router, select <strong>Network Topology</strong>.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="view_nw_gateway" class="step slideinstruction" data-x="0" data-y="0">
@@ -297,6 +314,7 @@ floating-601”.</li>
           <li>The router is now connected to the public network. To view more information about the router, place your mouse pointer over the Router icon. 
              <p>A new window with details about the Router will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="connect_private_network" class="step slideinstruction" data-x="1000" data-y="0">
@@ -306,6 +324,7 @@ floating-601”.</li>
         <ol>
            <li>To connect the private network, we will create a new Inteface. Select <strong>view router details</strong>.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="add_interface" class="step slideinstruction" data-x="2000" data-y="0">
@@ -317,6 +336,7 @@ floating-601”.</li>
           <li>To create a new interface, select <strong>+ Add Interface</strong>.
             <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="add_interface_details" class="step slideinstruction" data-x="3000" data-y="0">
@@ -328,6 +348,7 @@ floating-601”.</li>
            <li>Once you selected the private network, select <strong>Add Interface</strong> to add the interface.
               <p>You will be returned to the Router Overview view.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="router_with_interface" class="step slideinstruction" data-x="4000" data-y="0">
@@ -339,6 +360,7 @@ floating-601”.</li>
               <p>If the Status is “DOWN”, hit re-fresh on your browser a few times to see if the status changes.</p> </li>
            <li>To view the connection, select <strong>Network Topology</strong>.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="private_public_connected" class="step slideinstruction" data-x="5000" data-y="0">
@@ -349,6 +371,7 @@ floating-601”.</li>
               <p>It is now possible to add new instances and access them from the public internet.</p></li> 
            <li>To create a new instance, select <strong>Instances</strong> from the navigation pane.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_instance" class="step slideinstruction" data-x="-2000" data-y="1000">
@@ -360,6 +383,7 @@ floating-601”.</li>
           <li>To create a new instance, select <strong>+ Launch Instance”</strong>.
             <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_instance_one" class="step slideinstruction" data-x="-1000" data-y="1000">
@@ -374,6 +398,7 @@ floating-601”.</li>
              <p>All other fields can be left to their default values.</p</li>
           <li>Select the <strong>Access and Security</strong> tab to move to the next step.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_instance_two" class="step slideinstruction" data-x="0" data-y="1000">
@@ -384,6 +409,7 @@ floating-601”.</li>
            <p>All other fields can be left to their default values.</p></li>
            <li>Select the <strong>Networking</strong> tab to move to the next step.</p>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_instance_three" class="step slideinstruction" data-x="1000" data-y="1000">
@@ -393,6 +419,7 @@ floating-601”.</li>
           <li>From the “Available networks” box, drag and drop the internal network label into the “Selected Networks” box.</li>
           <li>Select the <strong>Post-Creation</strong> tab to move to the next step.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="create_instance_four" class="step slideinstruction" data-x="2000" data-y="1000">
@@ -405,6 +432,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
           <li>Once you have pasted the script, select <strong>Launch</strong> to launch the instance.
             <p>You will be returned to the Instances view</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="instance_created" class="step slideinstruction" data-x="3000" data-y="1000">
@@ -415,6 +443,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
           <li>It may take a minute or two for the instance to boot up, but once it is, the Power State will be “Running”.</li> 
           <li>The next step is to add a public IP address to the instance. Select <strong>Access and Security</strong> from the navigation pane.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="add_public_ip" class="step slideinstruction" data-x="4000" data-y="1000">
@@ -435,6 +464,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
           <li>To allocate a public IP, select <strong>Allocate IP To Project</strong>.
              <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="add_public_ip_two" class="step slideinstruction" data-x="-2000" data-y="2000">
@@ -446,6 +476,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
            <li>Select <strong>Allocate IP</strong> to allocate the IP address to the project.
              <p>You will be returned to the Floating IPs view.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="add_public_ip_three" class="step slideinstruction" data-x="-1000" data-y="2000">
@@ -457,6 +488,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
            <li>To associate the public IP address to an instance, select <strong>Associate</strong>.
             <p>A pop-up window will appear.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="add_public_ip_four" class="step slideinstruction" data-x="0" data-y="2000">
@@ -469,6 +501,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
           <li>Select the <strong>Associate</strong> button to associate the public IP address to the instance.
            <p>You will be returned to the Floating IPs view.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="public_ip_added" class="step slideinstruction" data-x="1000" data-y="2000">
@@ -479,6 +512,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
           <li>You can now view your creation! Open a new tab in your browser and enter the IP address.
              <p>Give the site a few minutes to set up. Hit refresh a few times if the site is not immediately available.</p></li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="just_checking" class="step slideinstruction" data-x="2000" data-y="2000">
@@ -486,6 +520,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
         <ol>
             <li>If things didn't go to plan, click <a target="_blank" href="index.html">HERE</a> to see one we created earlier.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="load_balancer" class="step slideinstruction" data-x="3000" data-y="2000">
@@ -493,6 +528,7 @@ For this exercise, the script can be found <a target="_blank" href="https://raw.
         <ol>
             <li>To build a Load Balancer, click <a target="_blank" href="loadbalancer.html">HERE</a> to start.</li>
         </ol>
+        <div class="watermark"><img src="images/cloudpractice_logo.png" alt=""></div>
     </div>
 
     <div id="overview" class="step" data-x="1500" data-y="0" data-scale="5"> </div>
