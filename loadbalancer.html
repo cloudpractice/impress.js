@@ -102,6 +102,7 @@
     -->
     <div id="instructions" class="step slideinstruction" data-x="-2000" data-y="-2000">
        <q>Now that we have created a web site using a single web server, we will extend the solution to include a second web server and a load balancer.</q>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
     <!--
         
@@ -120,6 +121,7 @@
     -->
     <div id="goal" class="step slideinstruction" data-x="-1000" data-y="-2000">
           <q>When web surfers attempt to access our web site, the load balancer will spread the requests across our web instances.</q>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="0" data-y="-2000">
@@ -128,6 +130,7 @@
          <ol>
 	    <li>To add a load balancer, select the <strong>Load Balancers</strong> link in the navigation pane.</li>
         </ol> 
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="1000" data-y="-2000">
@@ -138,6 +141,7 @@
 <p>NOTE: The Pool is a container that holds instances</p></li> 
            <li>To create a new Load Balancer Pool, select <strong>+ Add Pool</strong>. A pop-up window will appear.</li>
         </ol>        
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="2000" data-y="-2000">
@@ -153,6 +157,7 @@
           <li>Once completed, select <strong>Add</strong> to add your Load Balancer Pool.
               <p>You will be returned to the Load Balancer view.</p>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="3000" data-y="-2000">
@@ -165,6 +170,7 @@
              <p>A pop-up window will appear.</p></li>
            <li>NOTE: The VIP is the IP address that users will type into their web browser to reach your web site.</li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="4000" data-y="-2000">
@@ -179,6 +185,7 @@
           <li>Once completed, select <strong>Add</strong> to add your VIP.
              <p>You will be returned to the Load Balancer view.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="5000" data-y="-2000">
@@ -188,6 +195,7 @@
            <li>Once completed, the VIP name (<strong>web-vip</strong>) will appear in the <strong>web-pool</strong> Pools entry.</li>
            <li>The next step is to add instance members to the pool. To do this, select the <strong>Members</strong> tab.</li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
     
     <div class="step slideinstruction" data-x="-2000" data-y="-1000">
@@ -199,6 +207,7 @@
           <li>To add a new instance Member to the Load Balancer pool, select <strong>+ Add Member</strong>.
             <p>A pop-up window will appear.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="-1000" data-y="-1000">
@@ -211,6 +220,7 @@
           <li>Once completed, select <strong>Add</strong> to add the member instance.
             <p>You will be returned to the Members view.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="0" data-y="-1000">
@@ -220,6 +230,7 @@
            <li>Once completed, the new member instance will be added to the <strong>web-pool</strong> Pool.</li>
            <li>The next step is to add a public IP address to the Pool. To do this, select the <strong>Access & Security</strong> link in the Navigation pane.</li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="1000" data-y="-1000">
@@ -231,6 +242,7 @@
           <li>To allocate another Floating IP, select the <strong>Allocate IP To Project</strong> button.
             <p>A pop-up window will appear.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="2000" data-y="-1000">
@@ -242,6 +254,7 @@ you are requesting a second Floating IP (green bar).</li>
           <li>Select the <strong>Allocate IP</strong> to allocate the IP address to the project.
             <p>You will be returned to the Floating IPs view.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="3000" data-y="-1000">
@@ -252,6 +265,7 @@ you are requesting a second Floating IP (green bar).</li>
          <li>To associate the Public IP address with the VIP, select <strong>Associate</strong>.
              <p>A pop-up window will appear.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="4000" data-y="-1000">
@@ -263,6 +277,7 @@ you are requesting a second Floating IP (green bar).</li>
            <li>To complete the association, select the <strong>Associate</strong> button.
            <p>You will be returned to the Floating IPs view.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="5000" data-y="-1000">
@@ -273,12 +288,14 @@ you are requesting a second Floating IP (green bar).</li>
            <p>NOTE: In the Instance column, the value should be “-“.</p></li>
          <li>The next step is to add a second web server instance. To start, select <strong>Instances</strong> from the Navigation pane.</li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="-2000" data-y="0">
         <center><q>Challenge Time!</q></center>
         <p>For this second web server, we have not provided any instructions, but you've done it before.</p>
         <p>When creating the instance, click <a target="_blank" href="https://raw.githubusercontent.com/cloudpractice/WeatherApp/master/build-scripts/linux-vm-load.txt">HERE</a> for the new post-creation script.</p>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="-1000" data-y="0">
@@ -288,6 +305,7 @@ you are requesting a second Floating IP (green bar).</li>
          <li>On completion, a second web server instance will appear in the Instances list.</li>
          <li>The next step is to add this second web server instance to the load balancer. Select <strong>Load Balancers</strong> link in the Navigation pane.</li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="0" data-y="0">
@@ -300,6 +318,7 @@ you are requesting a second Floating IP (green bar).</li>
              <p>A pop-up window will appear.</p></li>
 
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="1000" data-y="0">
@@ -310,6 +329,7 @@ you are requesting a second Floating IP (green bar).</li>
           <li>The next step is to check out the website! 
             <p>If you need to recall the IP address, select <strong>Access & Security</strong>.</p></li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
     <div class="step slideinstruction" data-x="2000" data-y="0">
@@ -320,9 +340,12 @@ you are requesting a second Floating IP (green bar).</li>
           <li>Copy the IP address of the VIP, open a new tab in your web browser and paste in the IP address</li>
           <li>Try to access the IP Address from different web browsers to see if you can get different responses.</li>
         </ol>
+       <div class="watermark"><img src="images/cloud_practice.png" alt=""></div>
     </div>
 
-    <div id="overview" class="step" data-x="1500" data-y="0" data-scale="5"> </div>
+    <div id="overview" class="step" data-x="1500" data-y="0" data-scale="5"> 
+
+    </div>
 
 </div>
 
